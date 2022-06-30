@@ -1,0 +1,50 @@
+To run this code,
+The dataset have been included.
+The user just need to run the code.
+There are multiple function you can choose keep it or not.
+
+DataProcess:
+    pre_process: type conversion
+    get_data_and_label: divide the feature and label
+    problem_num: merge dataset according to missions
+        (you can imput 1, 2, 3)
+    data_normalization: data normalization (three optional method)
+FeatureSection:
+    pca: implement PCA (optional)
+    remove_features: remove 4 non-binary features (optional)
+    get_best_feature_number: get the best number of feature
+        (best feature number = 15)
+    feature_sel: get the index of best 15 feature
+    get_feature: extract the 15 feature from dataset
+Models:
+    model_KNN: K-Nearest-Neighbors
+    model_LinearRegre: Linear Regression
+    model_trivial_sys: Trivial System
+    model_SVR: Support Vector Regression
+    model_randomforest: Random Forest Regression
+    model_ridge: Ridge Regression
+    get_models: get all models that I used and its predicted y
+    model_best_KNN: best KNN
+        (Mission 1: k=8, Mission 2: k=5, Mission 3: k=3)
+    model_best_RF: best Random Forest Regression
+        (Mission 1: n_estimators=56, Mission 2: n_estimators=46, Mission 3: n_estimators=35)
+    model_best_ridge: best Ridge Regression
+        (Mission 1: alphas=0.11, Mission 2: alphas=0.15, Mission 3: alphas=0.11)
+Measurements:
+    perf_measures: get RMSE, MAE, R-square
+    get_best_fold: get best fold number of cross validation
+        (best number of fold = 5)
+    cross_val_comp: get better RMSE, MAE, R-square, accuracy of every model
+Main:
+    1. get data
+    2. normalization
+    3. get data and label
+    4. re-merge dataset based on different missions
+    5. get all models using default parameter
+    6. get best number of feature
+    7. select k best features
+    8. extract the features
+    9. optimize KNN, RF, Ridge and get best parameter using cross-validation
+    10.get measurements using best parameters
+    11.get best number of fold of cross-validation
+    12.use 5 fold cross-validation get better results
